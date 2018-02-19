@@ -3,6 +3,7 @@ public class Door {
     private int weight;
     private int width;
     private String color;
+    private Dimensions dimensions;
 
     public Door(int height, int weight, int width, String color) {
         this.height = height;

@@ -16,6 +16,9 @@ public class Room {
     public Tv getTv() {
         return tv;
     }
+    public void getTvDimensions(){
+        tv.getDimensions();
+    }
 
     public Bed getBed() {
         return bed;

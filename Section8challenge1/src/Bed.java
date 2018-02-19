@@ -1,24 +1,21 @@
 public class Bed {
     private String model;
     private int weight;
-    private Construction construction;
+    private Dimensions dimensions;
 
 
-    public  Bed(String model, int weight, Construction construction) {
+    public  Bed(String model, int weight, Dimensions dimensions) {
         this.model = model;
         this.weight = weight;
-        this.construction=construction;
+        this.dimensions =dimensions;
     }
 
-    public void bedDetails(){
+    public String getModel() {
         System.out.println("Bed model: " + model);
-        System.out.println("Bed weight: " + weight);
-    }
-    public void badDetails2(){
-        construction.displayConstruction();
+        return model;
     }
 
-    public Construction getConstruction() {
-        return construction;
+    public int getWeight() {
+        return weight;
     }
 }
