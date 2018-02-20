@@ -1,6 +1,6 @@
 public class Printer {
-    private int tonerLevel = 100;
-    private int numberOfPagesPrinted = 0;
+    private int tonerLevel;
+    private int numberOfPagesPrinted;
     private boolean duplexPrinter;
 
     public Printer(int tonerLevel, int numberOfPagesPrinted, boolean duplexPrinter) {
@@ -10,9 +10,10 @@ public class Printer {
     }
 
     public void fillUpToner(int addtionalToner) {
-        if (this.tonerLevel >= 0 && this.tonerLevel <= 100) {
-            this.tonerLevel += addtionalToner;
-        }
+        if (this.tonerLevel + addtionalToner > 100) {
+            System.out.println("Too much additionalToner");
+
+        } else this.tonerLevel += addtionalToner;
     }
 
     public int getTonerLevel() {
