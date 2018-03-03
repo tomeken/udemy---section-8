@@ -66,6 +66,18 @@
 
 
 }
+class Octavia extends Car{
+    public Octavia() {
+        super("1.6 TDI CR", "Color: Black", "Octavia");
+    }
+
+    @Override
+    public void startEngine(){
+        System.out.println("1: Wcisnij sprzęgło " +
+                "\n2: Przekręć kluczyk " +
+                "\n3: Engine is ON");
+    }
+}
  public class Main {
      public static void main(String[] args) {
          Car car = new Car("Diesel","Black","Octavia");
@@ -75,5 +87,13 @@
          System.out.println("Car speed: " + car.getSpeed());
          car.breakCar();
          System.out.println("Car speed: " + car.getSpeed());
+
+         Car octavia = new Octavia();
+         octavia.startEngine();
+         System.out.println("Octavia speed: " + octavia.getSpeed());
+         octavia.accelerate(50);
+         System.out.println("Octavia speed: " + octavia.getSpeed());
+         System.out.println("Octavia engine: " + octavia.getEngine());
+         System.out.println("Octavia cylinders: " + octavia.getCylinders());
      }
  }
