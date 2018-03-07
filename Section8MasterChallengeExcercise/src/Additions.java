@@ -7,6 +7,7 @@ public class Additions {
         this.price = price;
     }
 
+
     public String getName() {
         System.out.println("Additions name: " + name);
         return name;
