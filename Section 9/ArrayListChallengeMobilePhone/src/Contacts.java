@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class Contacts {
-    private ArrayList<String> contacts = new ArrayList<> ( );
+    private ArrayList<String> contactName = new ArrayList<> ( );
     private ArrayList<String> number = new ArrayList<> ( );
 
     public void addContactNameAndPhone(String contactName, String phoneNumber) {
         if (findContactNameBool (contactName) == false) {
-            contacts.add (contactName);
+            this.contactName.add (contactName);
             number.add (phoneNumber);
 
-        }
+        }else
         System.out.println ("Contact name already exist" );
 
     }
@@ -17,9 +17,9 @@ public class Contacts {
 
 
     public void printContacts() {
-        System.out.println ("Constact list size: " + contacts.size ( ));
-        for (int i = 0; i < contacts.size ( ); i++) {
-            System.out.println ((i + 1) + ". " + contacts.get (i) + " " + number.get (i));
+        System.out.println ("Constact list size: " + contactName.size ( ));
+        for (int i = 0; i < contactName.size ( ); i++) {
+            System.out.println ((i + 1) + ". " + contactName.get (i) + " " + number.get (i));
         }
     }
 
@@ -30,7 +30,7 @@ public class Contacts {
          }
     }
     private void modifyContactName(int position, String newName){
-        contacts.set (position,newName);
+        contactName.set (position,newName);
     }
 
     public void modifyContactNumber(String currentName, String newPhoneNumber){
@@ -45,9 +45,9 @@ public class Contacts {
     }
 
     private int findContactName(String contactName) {
-        return contacts.indexOf (contactName);
+        return this.contactName.indexOf (contactName);
     }
     private boolean findContactNameBool(String contactName){
-        return contacts.contains (contactName);
+        return this.contactName.contains (contactName);
     }
 }
